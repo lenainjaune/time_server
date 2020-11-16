@@ -5,25 +5,32 @@ source : https://www.digitalocean.com/community/tutorials/how-to-set-up-time-syn
 
 
 # date actuelle
-**date**
+``` sh
+user@host ~# date
 Mon Nov 16 09:37:51 UTC 2020
+```
 => UTC = universel
 
 # Debian Buster NTP
 Première chose : la Time Zone
-**timedatectl list-timezones**
+``` sh
+user@host ~# timedatectl list-timezones
 ...
 Europe/Moscow
 Europe/Oslo
-**Europe/Paris**
+Europe/Paris
 Europe/Podgorica
 Europe/Prague
 ...
+```
 => liste les TZ disponibles
 
-**timedatectl set-timezone Europe/Paris**
+``` sh
+user@host ~# timedatectl set-timezone Europe/Paris
+```
 => règle la TZ
-
-**date**
+``` sh
+user@host ~# date
 Mon Nov 16 10:42:26 CET 2020
+```
 => CET = Central European Time

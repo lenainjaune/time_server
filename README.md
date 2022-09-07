@@ -1,23 +1,33 @@
-# ntp
-NTP Howto
+Service de temps
+
+Avant c'était uniquement NTP pour ce que j'en connais, depuis il y en a d'autres.
+
+# systemd-timesyncd.service
+
+Sous systemd (par défaut sous Debian) il y a un nouveau démon qui gère le temps et remplace NTP : systemd-timesyncd.service
+
+## Changer la date temporairement
+`root@host:~$ systemctl stop systemd-timesyncd.service ; date --set="20220827 22:00:00" ; ... actions ... ; systemctl start systemd-timesyncd.service` 
+
+# NTP
 
 source : https://www.digitalocean.com/community/tutorials/how-to-set-up-time-synchronization-on-debian-10
 
-# Installer le service NTP
+## Installer le service NTP
 Sous Debian
 ```sh
 root@host ~# apt install ntp
 ```
 Normallement le service se lance tout seul mais on peut vérifier avec ```systemctl status ntp```
 
-# Date actuelle
+## Date actuelle
 ``` sh
 user@host ~# date
 Mon Nov 16 09:37:51 UTC 2020
 ```
 => UTC = universel
 
-# Debian Buster NTP
+## Debian Buster NTP
 Première chose : la Time Zone
 ``` sh
 user@host ~# timedatectl list-timezones

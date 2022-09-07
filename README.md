@@ -2,12 +2,12 @@ Service de temps
 
 Avant c'était uniquement NTP pour ce que j'en connais, depuis il y en a d'autres.
 
-# systemd-timesyncd.service
+# systemd-timesyncd
 
-Sous systemd (par défaut sous Debian) il y a un nouveau démon qui gère le temps et remplace NTP : systemd-timesyncd.service
+Sous systemd (par défaut sous Debian) il y a un nouveau démon qui gère le temps et remplace NTP : systemd-timesyncd
 
 ## Changer la date temporairement
-`root@host:~$ systemctl stop systemd-timesyncd.service ; date --set="20220827 22:00:00" ; ... actions ... ; systemctl start systemd-timesyncd.service` 
+`root@host:~$ systemctl stop systemd-timesyncd ; date --set="20220827 22:00:00" ; ... actions ... ; systemctl start systemd-timesyncd` 
 
 # NTP
 

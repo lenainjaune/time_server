@@ -1,3 +1,48 @@
+RO en attente de la fin de migration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Service de temps
 
 Avant c'était uniquement NTP pour ce que j'en connais, depuis il y en a d'autres.
